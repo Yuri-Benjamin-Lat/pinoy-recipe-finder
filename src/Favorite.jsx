@@ -6,7 +6,6 @@ import Favoritelist from "./components/Favoritelist";
 
 export default function Favorite() {
   const { isInstallable, installApp, isOnline } = usePWA();
-
   
   return (
     <div className="website-margin">
