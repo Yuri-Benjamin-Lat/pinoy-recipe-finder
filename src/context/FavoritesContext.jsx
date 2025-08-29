@@ -21,10 +21,21 @@ export const FavoritesProvider = ({ children }) => {
       const savedFavorites = localStorage.getItem('recipeFavorites');
       console.log('Retrieved from localStorage:', savedFavorites);
       
-      if (savedFavorites) {
+      if (savedFavorites && savedFavorites !== 'undefined') {
         const parsedFavorites = JSON.parse(savedFavorites);
-        console.log('Parsed favorites:', parsedFavorites);
-        setFavorites(parsedFavorites);
+        
+        // Validate that parsed data is an array
+        if (Array.isArray(parsedFavorites)) {
+          console.log('Parsed favorites:', parsedFavorites);
+          setFavorites(parsedFavorites);
+        } else {
+          console.warn('Invalid favorites data format, resetting...');
+          localStorage.removeItem('recipeFavorites');
+          setFavorites([]);
+        }
+      } else {
+        console.log('No saved favorites found or invalid data');
+        setFavorites([]);
       }
     } catch (error) {
       console.error('Error loading favorites from localStorage:', error);
@@ -33,6 +44,7 @@ export const FavoritesProvider = ({ children }) => {
       setFavorites([]);
     } finally {
       setIsLoaded(true);
+      console.log('Favorites loading complete');
     }
   }, []);
 
@@ -41,16 +53,32 @@ export const FavoritesProvider = ({ children }) => {
     if (isLoaded) {
       console.log('Saving favorites to localStorage:', favorites);
       try {
-        localStorage.setItem('recipeFavorites', JSON.stringify(favorites));
-        console.log('Successfully saved to localStorage');
+        // Only save if we have valid data
+        if (Array.isArray(favorites)) {
+          localStorage.setItem('recipeFavorites', JSON.stringify(favorites));
+          console.log('Successfully saved to localStorage');
+        } else {
+          console.warn('Invalid favorites data, not saving to localStorage');
+        }
       } catch (error) {
         console.error('Error saving favorites to localStorage:', error);
+        // Handle storage quota exceeded error
+        if (error.name === 'QuotaExceededError') {
+          console.error('LocalStorage quota exceeded!');
+        }
       }
     }
   }, [favorites, isLoaded]);
 
   const addToFavorites = (recipe) => {
     console.log('Adding to favorites:', recipe);
+    
+    // Validate recipe object has required properties
+    if (!recipe || !recipe.id) {
+      console.error('Invalid recipe object:', recipe);
+      return;
+    }
+    
     setFavorites((prevFavorites) => {
       // Check if recipe already exists to avoid duplicates
       if (!prevFavorites.some(fav => fav.id === recipe.id)) {
@@ -72,12 +100,19 @@ export const FavoritesProvider = ({ children }) => {
     return favorites.some(recipe => recipe.id === recipeId);
   };
 
+  const clearAllFavorites = () => {
+    console.log('Clearing all favorites');
+    setFavorites([]);
+    localStorage.removeItem('recipeFavorites');
+  };
+
   const value = {
     favorites,
     addToFavorites,
     removeFromFavorites,
     isFavorite,
-    isLoaded
+    isLoaded,
+    clearAllFavorites
   };
 
   return (

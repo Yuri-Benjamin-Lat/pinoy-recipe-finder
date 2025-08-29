@@ -19,23 +19,39 @@ export default function Recipelist({ searchTerm }) {
   };
 
   return (
-    <div className="recipe-list default-margin temp-border" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-      {filteredRecipes.map((recipe) => (
-        <div key={recipe.id}>
-          <h2>{recipe.name}</h2>
-          <img src={recipe.image} alt={recipe.name} style={{ width: '200px', borderRadius: '0.5rem' }} />
-          <p>{recipe.description}</p>
-          
-          <div style={{ display: 'flex', gap: '1rem' }}>
+    <div className="mb-3 recipe-list default-margin temp-border c-bg">
+      <h2 className='pt-7 text-2xl' style={{ textAlign: 'center' }}>RECIPES</h2>
+      <div className='pb-5'
+      style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(3, 1fr)', 
+        gap: '2rem',
+        marginTop: '2rem'
+      }}>
+        {filteredRecipes.map((recipe) => (
+          <div key={recipe.id} className=''
+          style={{
+            border: '1px solid #ddd',
+            borderRadius: '0.5rem',
+            padding: '1rem',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <h2 className='pb-4 font-bold' style={{textAlign: 'center'}}>{recipe.name}</h2>
+            <img src={recipe.image} alt={recipe.name} style={{ width: '200%', height: '200px', objectFit: 'cover', borderRadius: '0.5rem' }} />
+            <p className='text-justify pt-4'>{recipe.description}</p>
+            
+            <div style={{display: 'flex' }} className='pt-5 mt-auto justify-between'>
             <Link to={`/recipe/${recipe.id}`}>
-              <button>View Details</button>
+              <button className='text-sm bg-blue-50 hover:bg-white text-gray-1000 rounded-md px-3 py-1 transition-colors duration-200 ease-in-out cursor-pointer'>View Details</button>
             </Link>
-            <button onClick={() => handleFavoriteClick(recipe)}>
-              {isFavorite(recipe.id) ? "Remove from favorites" : "Add to favorites"}
-            </button>
+              <button className='text-sm bg-blue-50 hover:bg-white text-gray-1000 rounded-md px-3 py-1 transition-colors duration-200 ease-in-out cursor-pointer' onClick={() => handleFavoriteClick(recipe)}>
+                {isFavorite(recipe.id) ? "Remove from favorites" : "Add to favorites"}
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

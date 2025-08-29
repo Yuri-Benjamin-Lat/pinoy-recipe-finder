@@ -2,8 +2,8 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App';
-import Favorite from './Favorite';
+import App from './pages/App';
+import Favorite from './pages/Favorite';
 import RecipeDetails from './components/Recipedetails';
 import { FavoritesProvider } from './context/FavoritesContext';
 

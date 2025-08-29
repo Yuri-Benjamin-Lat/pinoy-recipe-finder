@@ -7,31 +7,47 @@ export default function Favoritelist() {
 
   if (favorites.length === 0) {
     return (
-      <div className="temp-border default-margin">
-        <p style={{fontSize: '2rem'}}>No favorites yet!</p>
+      <div className="temp-border default-margin c-bg">
+      <h2 className='pt-7 text-2xl' style={{ textAlign: 'center' }}>Your Favorite Recipes</h2>
+        <p style={{fontSize: '2rem'}} className='text-center pt-10 pb-10'>No favorites yet!</p>
       </div>
     );
   }
 
   return (
-    <div className="favorite-list default-margin temp-border">
-      <h2>Your Favorite Recipes</h2>
-      {favorites.map((recipe) => (
-        <div key={recipe.id} className="favorite-item">
-          <h3>{recipe.name}</h3>
-          <img src={recipe.image} alt={recipe.name} style={{ width: '200px', borderRadius: '0.5rem' }} />
-          <p>{recipe.description}</p>
-          
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <Link to={`/recipe/${recipe.id}`}>
-              <button>View Details</button>
-            </Link>
-            <button onClick={() => removeFromFavorites(recipe.id)}>
-              Remove from favorites
-            </button>
-          </div>
+      <div className="mb-3 favorite-list default-margin temp-border c-bg">
+        <h2 className='pt-7 text-2xl' style={{ textAlign: 'center' }}>Your Favorite Recipes</h2>
+        <div className='pb-5'
+        style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(3, 1fr)', 
+          gap: '2rem',
+          marginTop: '2rem'
+        }}>
+          {favorites.map((recipe) => (
+            <div key={recipe.id} className="favorite-item"
+              style={{
+              border: '1px solid #ddd',
+              borderRadius: '0.5rem',
+              padding: '1rem',
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+              <h3 className='pb-4 font-bold' style={{textAlign: 'center'}}>{recipe.name}</h3>
+              <img src={recipe.image} alt={recipe.name} style={{ width: '200%', height: '200px', objectFit: 'cover', borderRadius: '0.5rem' }} />
+              <p className='text-justify pt-4'>{recipe.description}</p>
+              
+              <div style={{display: 'flex'}} className='pt-5 mt-auto justify-between'>
+                <Link to={`/recipe/${recipe.id}`}>
+                  <button className='text-sm bg-red-50 hover:bg-white text-gray-1000 rounded-md px-3 py-1 transition-colors duration-200 ease-in-out cursor-pointer'>View Details</button>
+                </Link>
+                <button className='text-sm bg-red-50 hover:bg-white text-gray-1000 rounded-md px-3 py-1 transition-colors duration-200 ease-in-out cursor-pointer' onClick={() => removeFromFavorites(recipe.id)}>
+                  Remove from favorites
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
   );
 }

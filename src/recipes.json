@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Sinigang na Baboy",
-    "image": "/assets/pork-sinigang.jpg",
+    "image": "/assets/pork-sinigang.webp",
     "description": "A savory and sour soup made with pork, tamarind broth, and various vegetables.",
     "ingredients": ["1 kg pork belly", "1.5 liters water", "1 packet tamarind soup mix", "1 large onion", "2 large tomatoes", "1 radish", "1 bundle water spinach"],
     "instructions": ["Boil pork in water until tender.", "Add onions, tomatoes, and radish. Simmer for 10 minutes.", "Stir in tamarind mix and add water spinach. Serve hot."]
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Pork Sisig",
-    "image": "/assets/sisig.jfif",
+    "image": "/assets/sisig.jpg",
     "description": "A sizzling, savory dish made from chopped pig's face and belly, seasoned with calamansi and chili.",
     "ingredients": ["500g pig's face/ears", "250g pork belly", "1 large onion, chopped", "3 chili peppers", "1/4 cup soy sauce", "Calamansi", "1 egg"],
     "instructions": ["Boil pork parts until tender, then grill or broil until crispy.", "Chop finely and sauté with onions and chili.", "Serve on a sizzling plate, top with a raw egg, and squeeze calamansi over."]
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "Lechon Kawali",
-    "image": "/assets/lechon-kawali.jfif",
+    "image": "/assets/lechon-kawali.jpg",
     "description": "Deep-fried pork belly with a perfectly crispy skin and juicy, tender meat.",
     "ingredients": ["1 kg pork belly slab", "Water", "Salt", "Bay leaves", "Whole peppercorns", "Cooking oil"],
     "instructions": ["Simmer pork belly in water with salt, bay leaves, and peppercorns until tender.", "Air dry or pat dry completely.", "Deep fry in hot oil until the skin is golden brown and crispy."]
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "name": "Crispy Pata",
-    "image": "/assets/crispy-pata.jpg",
+    "image": "/assets/crispy-pata.JPG",
     "description": "A whole pork leg boiled until tender and then deep-fried until golden and crunchy.",
     "ingredients": ["1 whole pork leg (pata)", "Water", "Soy sauce", "Vinegar", "Garlic", "Bay leaves", "Cooking oil"],
     "instructions": ["Boil pork leg with seasonings until very tender.", "Drain and dry thoroughly, preferably chilling it for a few hours.", "Deep fry until skin is blistered and crispy."]
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "name": "Pancit Palabok",
-    "image": "/assets/palabok.jfif",
+    "image": "/assets/palabok.jpg",
     "description": "A noodle dish with a rich shrimp sauce, topped with shrimp, crushed chicharon, and hard-boiled eggs.",
     "ingredients": ["Rice noodles (palabok noodles)", "Ground pork", "Shrimp", "Smoked fish flakes (tinapa)", "Chicharon, crushed", "Hard-boiled eggs", "Annatto powder for color"],
     "instructions": ["Cook noodles as per package instructions.", "Make the sauce by sautéing pork and shrimp, then simmering with shrimp broth and annatto.", "Pour sauce over noodles and add all toppings."]
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "name": "Lumpia Shanghai",
-    "image": "/assets/shanghai.jfif",
+    "image": "/assets/shanghai.webp",
     "description": "Crispy, deep-fried spring rolls filled with a savory mixture of ground pork and vegetables.",
     "ingredients": ["500g ground pork", "1 cup minced carrots", "1 cup minced onions", "Lumpia wrappers", "Cooking oil", "Sweet and sour sauce for dipping"],
     "instructions": ["Mix ground pork with all the minced vegetables and seasonings.", "Wrap a small amount of the mixture in a lumpia wrapper.", "Deep fry until golden brown and crispy."]
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "name": "Bulalo",
-    "image": "/assets/bulalo.jfif",
+    "image": "/assets/bulalo.jpg",
     "description": "A light-colored soup made by cooking beef shanks and bone marrow until the fat has melted into the broth.",
     "ingredients": ["1 kg beef shanks with bone marrow", "2 corns on the cob, cut into 3 parts", "1/4 head of cabbage", "Pechay or bok choy", "Onions", "Fish sauce"],
     "instructions": ["Boil beef shanks in a large pot of water for several hours until the meat is falling off the bone.", "Add corn, onions, and cabbage.", "Season with fish sauce and serve piping hot."]
@@ -82,7 +82,7 @@
   {
     "id": 11,
     "name": "Tapsilog",
-    "image": "/assets/tapsilog.jfif",
+    "image": "/assets/tapsilog.webp",
     "description": "A popular breakfast meal containing beef tapa, fried rice (sinangag), and a fried egg (itlog).",
     "ingredients": ["250g beef tapa", "1 cup garlic fried rice (sinangag)", "1 fried egg", "Vinegar dipping sauce", "Sliced tomatoes"],
     "instructions": ["Fry the beef tapa until cooked to your liking.", "Fry an egg sunny-side up.", "Serve everything on a plate with hot garlic rice and a side of vinegar dip."]
@@ -98,7 +98,7 @@
   {
     "id": 13,
     "name": "Laing",
-    "image": "/assets/laing.jpg",
+    "image": "/assets/laing.webp",
     "description": "A spicy Bicolano dish of shredded taro leaves cooked in thick coconut milk with shrimp paste and chili.",
     "ingredients": ["Dried taro leaves", "2 cups thick coconut milk", "1/2 cup shrimp paste", "Pork or shrimp for flavor", "Siling labuyo (red chili)"],
     "instructions": ["Simmer pork/shrimp in coconut milk with shrimp paste and chili.", "Add the dried taro leaves and continue to simmer without stirring until leaves are soft.", "Stir gently and cook until the sauce is very thick and oily."]
@@ -106,7 +106,7 @@
   {
     "id": 14,
     "name": "Dinuguan",
-    "image": "/assets/dinuguan.jfif",
+    "image": "/assets/dinuguan.jpg",
     "description": "A savory stew of pork offal simmered in a rich, dark gravy of pig blood, garlic, chili, and vinegar.",
     "ingredients": ["500g pork meat and/or offal", "1 cup pig's blood", "1/2 cup vinegar", "Garlic", "Onion", "Long green chili (siling haba)"],
     "instructions": ["Sauté garlic and onion, then add pork and cook until brown.", "Pour in vinegar and simmer without stirring for a few minutes.", "Stir in the pig's blood and cook until the sauce thickens. Add green chili before serving."]
@@ -122,7 +122,7 @@
   {
     "id": 16,
     "name": "Arroz Caldo",
-    "image": "/assets/arrozcaldo.jfif",
+    "image": "/assets/arrozcaldo.webp",
     "description": "A hearty Filipino rice porridge (congee) cooked with chicken, ginger, and garnished with toasted garlic.",
     "ingredients": ["1 cup rice", "500g chicken pieces", "2 liters chicken broth", "1 thumb-sized ginger, sliced", "Toasted garlic flakes", "Scallions", "Hard-boiled egg"],
     "instructions": ["Sauté ginger and chicken in a pot.", "Add rice and stir-fry for a minute.", "Pour in chicken broth, bring to a boil, then simmer until rice is soft and the porridge is thick. Garnish before serving."]
@@ -138,7 +138,7 @@
   {
     "id": 18,
     "name": "Kaldereta",
-    "image": "/assets/kaldereta.jfif",
+    "image": "/assets/kaldereta.webp",
     "description": "A classic Filipino meat stew, typically with goat or beef, cooked in a tomato-based sauce with liver paste.",
     "ingredients": ["1 kg beef or goat meat, cubed", "1 can tomato sauce", "1/4 cup liver paste", "Potatoes", "Carrots", "Bell peppers", "Green olives"],
     "instructions": ["Sauté garlic and onions, then brown the meat.", "Add tomato sauce and water, then simmer until meat is tender.", "Add liver paste, vegetables, and olives. Cook until vegetables are tender."]

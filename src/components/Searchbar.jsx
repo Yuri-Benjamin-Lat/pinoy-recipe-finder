@@ -7,12 +7,19 @@ export default function Navbar({ searchTerm, setSearchTerm }) {
     };
 
     return (
-      <div className="temp-border default-margin">
+      <div className="default-margin mt-5 mb-5">
       <input
         type="text"
         placeholder="Search recipes..."
         value={searchTerm}
         onChange={handleChange}
+        className='c-bg'
+        style={{
+        width: '100%',
+        border: '1px solid #ccc',
+        borderRadius: '0.5rem',
+        padding: '0.5rem 1.5rem 0.5rem'
+        }}
       />
       </div>
     );

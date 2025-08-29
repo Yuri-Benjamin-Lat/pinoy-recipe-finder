@@ -8,8 +8,33 @@
 
 .temp-border{
     border: 1px solid;
+    border-radius: 10px;
 }
 
 .default-margin{
     padding: 0px 50px 0px;
+}
+
+.bg{
+    background-color: #e5e5f7;
+    opacity: 0.99;
+    background-image: radial-gradient(#421616 0.5px, #f3fafb 0.5px);
+    background-size: 10px 10px;
+    min-height: 100vh;
+}
+
+.bg2{
+    background-color: #e5e5f7;
+    opacity: 0.99;
+    background-image: radial-gradient(#421616 0.5px, #faf3fb 0.5px);
+    background-size: 10px 10px;
+    min-height: 100vh;
+}
+
+.c-bg{
+    background-color: #ffffff;
+}
+
+.cont-max{
+    max-height: 500px;
 }
